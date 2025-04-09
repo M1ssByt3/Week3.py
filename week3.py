@@ -1,3 +1,4 @@
+#Function definition
 def calculate_discount(price, discount_percent):
     if discount_percent >= 20:
         discount_amount = price * (discount_percent / 100)
@@ -17,5 +18,6 @@ try:
         print(f"Discount applied. Final price: ${final_price:.2f}")
     else:
         print(f"No discount applied. Final price: ${final_price:.2f}")
-except ValueError:
-    print("Please enter valid price and discount.")
+except ValueError as e:
+    print("Error: Invalid input! Please enter numbers only.")
+    print("Details:", e)
